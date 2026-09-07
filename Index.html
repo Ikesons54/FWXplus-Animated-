@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frameworks x+ Intro</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
+    body {
+      background-color: #0b0f12; /* Dark background matching your image */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      overflow: hidden;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      opacity: 0;
+      animation: containerAppear 0.5s ease forwards 0.3s;
+    }
+
+    @keyframes containerAppear {
+      to { opacity: 1; }
+    }
+
+    /* Style for your actual image graphic */
+    .logo-graphic {
+      width: 140px; /* Adjust size if needed */
+      height: auto;
+      transform: scale(0.8);
+      opacity: 0;
+      filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.4)); /* Adds a neon cyan glow matching your design */
+      animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 0.8s;
+    }
+
+    @keyframes popIn {
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    /* Text Animations */
+    .logo-text h1 {
+      color: #ffffff;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin: 0;
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeSlideUp 0.8s ease forwards 1.5s;
+    }
+
+    .logo-text h1 span {
+      color: #00f2fe; /* Cyan neon color */
+    }
+
+    .logo-text p {
+      color: #94a3b8;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+      margin: 8px 0 0 0;
+      opacity: 0;
+      transform: translateY(15px);
+      animation: fadeSlideUp 0.8s ease forwards 2.0s;
+    }
+
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logo-container">
+    <!-- Your PNG image file used here -->
+    <img src="my-logo-intro.png" alt="Frameworks x+ Icon" class="logo-graphic">
+    
+    <!-- Text Content matching your image -->
+    <div class="logo-text">
+      <h1>Frameworks x<span>+</span></h1>
+      <p>Analyze. Structure. Execute.</p>
+    </div>
+  </div>
+
+</body>
+</html>
